@@ -1,0 +1,294 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\usepackage{fontspec}   %加這個就可以設定字體
+\usepackage{xeCJK}       %讓中英文字體分開設置
+\setCJKmainfont{I.MingCP} %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
+\XeTeXlinebreaklocale "zh"             %這兩行一定要加，中文才能自動換行
+\XeTeXlinebreakskip = 0pt plus 1pt     %這兩行一定要加，中文才能自動換行
+
+% adjust the page margins
+\usepackage[scale=0.77]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+%\usepackage{fontawesome}
+\usepackage{import}
+
+% personal data
+\name{Jiali}{Xing}
+\title{邢嘉力}                               % optional, remove / comment the line if not wanted
+%\address{North Building, {Room N303B}, Duke University}{Durham NC 27707}{} % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1 267-764-9803}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{xjiali@seas.upenn.edu}                         % optional, remove / comment the line if not wanted
+% \homepage{vcm-6003.vm.duke.edu/blog/}                         % optional, remove / comment the line if not wanted
+\extrainfo{\faGlobe\ \href{https://sites.google.com/seas.upenn.edu/xjiali/}{My Homepage}}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+\AfterPreamble{\hypersetup{
+  colorlinks,
+  linkcolor=blue,
+  anchorcolor=blue,
+  citecolor=blue
+}}
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+% \small{Undergraduate electrical and electronic engineer completing the final year of a master's degree. Passionate about science, with strong technical, business, and interpersonal skills for working in a team and successfully completing a project.}
+
+\section{Education}
+
+\vspace{5pt}
+
+\subsection{Academic Qualifications}
+
+\vspace{5pt}
+
+\begin{itemize}
+	
+	
+	\item{\cventry{Jan.2021--Present}{%\href{https://econ.duke.edu/masters-programs/degree-programs/msec}{
+				Ph.D. Computer and Information Science}
+			{University of Pennsylvania}{Philadelphia}{\textit{GPA: 3.81/4 }}{Coursework: Beginning Taiwaness, Theory of Computation}}  % arguments 3 to 6 can be left empty	
+	
+%	\item{\cventry{Sept.2020--Jan.2021}{%\href{https://econ.duke.edu/masters-programs/degree-programs/msec}{
+%				Ph.D. Computer Science}
+%			{Duke University}{Durham}{\textit{ }}{Coursework: Operating System}}  % arguments 3 to 6 can be left empty
+%		
+
+\item{\cventry{Sept.2018--May\,2020}{%\href{https://econ.duke.edu/masters-programs/degree-programs/msec}{
+M.S. Economics \& Computation}
+{Duke University}{Durham}{\textit{GPA: 3.96/4}}{Coursework: Computational Economics, Design and Analysis Algorithms, Artificial Intelligence, Ph.D. Econometrics I, II, Machine Learning, Econometrics of Market Design, Distributed System}}  % arguments 3 to 6 can be left empty
+	
+	\item{\cventry{Sept.2014--May\,2018}{Bachelor of Economics}{Wuhan University}{Wuhan}{\textit{GPA: 3.89/4}}{Coursework: Calculus, Real Analysis, Linear Algebra, Ordinary Differential Equation, Dynamic Optimization, Probability Theory and Statistics, Stochastic Processes, Time Series, and Mathematical Modeling}}
+
+\end{itemize}
+
+\vspace{2pt}
+
+%\subsection{Standard Tests}
+%
+%\vspace{5pt}
+%
+%\begin{itemize}
+% 
+% \item TOEFL: 108
+% \item GRE: 333 + 3.5
+% 
+%\end{itemize}
+
+% \item{\textbf{Masters Project (Ongoing):} \textit{'Development of an Intelligent Humanoid Robot'}
+% 
+% \vspace{3pt}
+% 
+% \small{I am part of a team developing a 5ft autonomous humanoid robot. This ambitious project requires strong team-working skills and high technical ability. I work well as part of the team, contributing in group discussions and taking initiative to set myself tasks when the next stage of the project is not clear. Given the role of electronics supervisor I am responsible for setting goals and ensuring all the electronic system designs are realised on time and meet the specifications of the project.}}
+% 
+% \newpage
+% 
+% \item{\textbf{3rd year individual project:} \textit{'Artificial Neural Network Approach to Source Localisation in Radiation Portal Monitoring'}
+% 
+% \vspace{3pt}
+% 
+% \small{This challenging project took place over the entirety of my third year. It required excellent planning and organisational skills, and the ability to teach myself an entirely new and complex subject. The project was a success, with the system being able to localise a radioactive source down to $ 3 cm$ within a $ 600 m^3$ sensor array. This project has been suggested for publication by my supervisor.}}
+% 
+% \vspace{6pt}
+% 
+% \item{\textbf{Industrial Project with Leyland Motors Ltd:}\textit{'Development of a Facility to Ensure the Achievement of Torque Parameters for a Specific Axle Configuration'}
+% 
+% \vspace{3pt}
+% 
+% \small{In the 3rd year of my course I spent a week completing an industrial project for Leyland Motors. I worked with a team operating as consultants for a particular problem the company was having. During this project I was working in a professional environment, and co-operating with various managers and engineers to create a design that met the requirements of the problem.}}
+% 
+% \end{itemize}
+
+\section{Research}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+%\item{\cventry{Mar.2021}{A Framework for Simulation of Permissioned Blockchains for Logistics and Beyond}{Talaria}{}{}{\vspace{3pt} Jiali Xing, David Fischer, Nitya Labh, Ryan Piersma, Benjamin C. Lee, Yu Amy Xia, Tuhin Sahai, Vahid Tarokh.}}
+%
+%\vspace{6pt}
+
+\item{\cventry{\href{https://conferences.sigcomm.org/hotnets/2021/accepted.html}{HotNets21}}{Joint with Henri Maxime Demoulin, Konstantinos Kallas, and Benjamin C. Lee}{Charon: A Framework for Microservice Overload Control}{}{}{\vspace{3pt} Modern cloud applications are increasingly large and complex, designing an efficient overload control scheme that scales well is tedious. We argue that part of the challenge is a lack of first principles mechanisms one can use to design scalable and verifiable policies. We present Charon, a market-based scheme for large scale cloud applications. Charon relies on tokens to negotiate the acquisition of compute resources. Charon decouple the mechanisms used to generate and value tokens, and introduces a novel price propagation technique that scales well to large scale cloud applications. We study how one can build, using Charon's primitives, a concrete overload control policy and its performance compared to a policy built without Charon.}}
+
+\vspace{6pt}
+%\clearpage
+
+\item{\cventry{Ongoing}{Joint with Benjamin C. Lee}{Fair Allocation for Complementary and Substitutable System Resources}{}{}{\vspace{3pt} We present a framework to model and allocate a mix of complementary and substitutable resources. The framework operationalizes the nested constant elasticity of substitution utility function and develops an allocation procedure that guarantees sharing incentives and Pareto efficiency. We draw parameters from gem5 experiments and then compare our algorithm against DRF.}}
+
+\vspace{6pt}
+
+\item{\cventry{\href{https://users.cs.duke.edu/~jx76/blog/wp-content/uploads/2019/10/Xing-Jiali_Econ_690_Term_paper_revised.pdf}{Term Paper}}{Sole Author}{Does Centralized Corruption Reduce Bribes?}{}{}{\vspace{3pt} After considering heteroskedasticity, spatial autocorrelation, and robustness, we find that centralized bureaucracy does not lower corruption by reducing minimum bribes, i.e., the bribe frontier, but does lower the bribes by reducing the bribe inefficiency. It means that once the entrepreneurs pay bribes efficiently, a more centralized bureaucratic structure will not help reduce their bribes anymore.}}
+
+%\vspace{6pt}
+
+%\item{\cventry{\href{https://users.cs.duke.edu/~jx76/blog/wp-content/uploads/2019/01/Liquid_Democracy_Paper.pdf}{Term Paper}}{Joint with Vanessa Alwan, Alex Boss, Hyoung-yoon Kim, Poorva Navalgundkar}{Analysis of Voter Behavior in Liquid Democracy}{}{}{\vspace{3pt}We formalize liquid democracy and study voter behavior under game theory framework. Through simulation, our model suggests that liquid democracy increases voter representation and accuracy compared to direct democracy.}}
+
+% \vspace{6pt}
+
+% \clearpage
+
+% \item{\cventry{\href{http://vcm-6003.vm.duke.edu/blog/wp-content/uploads/2019/01/Draft-Dissertation-English.pdf}{Bachelor's Thesis}}{Joint with Hui Hu}{Forecasting the demand of new energy vehicles in China}{}{}{\vspace{3pt}This article uses the Bass model to estimate the diffusion pattern and market potential of Chinese NEVs, and employs the Generalized Bass model to estimate the impact of government subsidies on the diffusion of NEVs. Through the established Bass model, we can predict that the market for NEVs will saturate in about 5 years.}}
+
+\end{itemize}
+
+%% Publications from a BibTeX file without multibib
+%%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%%  to redefine the heading string ("Publications"): 
+%\renewcommand{\refname}{Projects}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% \section{RA Experience}
+\section{External Collaboration}
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{\cventry{May.2022--Dec.2022}{Meta Inc.}{Summer Research Internship}{Meta, Menlo Park, CA}{}{\vspace{3pt} With Bilge Acun,
+		Aditya Sundarrajan,
+		David Brooks,
+		Manoj Chakkaravarthy,
+		Carole-Jean Wu,
+		Benjamin C. Lee, we propose Carbon Responder to reduce datacenter carbon emission. It modulates heterogeneous datacenter computation in response to the marginal carbon intensity of the energy supply. Carbon Responder targets both online and batch workloads for demand response and develops strategies for apportioning curtailments across heterogeneous workloads}}
+
+\vspace{6pt}
+
+\item{\cventry{Jun.2020--Mar.2021}{Raytheon Technologies and William \& Mary}{Research Collaboration}{Durham, NC}{}{\vspace{3pt} With David Fischer, Nitya Labh, Ryan Piersma, Benjamin C. Lee, Yu Amy Xia, Tuhin		Sahai, and Vahid Tarokh, we implemented a framework for simulation of permissioned blockchains for logistics and beyond.}}
+
+
+% \item{\cventry{Jun.2019--Jan.2020}{With Professor Cynthia Rudin and Professor Yaron Shaposhnik}{Triplets Embedding for Visualization}{Durham, NC}{}{\vspace{3pt} In order to visualize high dimensional data, we tried to achieve the dimension reduction in an interpretable way by perserving the rank of edges in selected triplets of data points.}}
+
+% \vspace{6pt}
+
+% \item{\cventry{Jan.2019-Jul.2019}{For Professor \href{https://sites.duke.edu/rachelkranton/}{Rachel E. Kranton}}{Dimension Reduction for Visualization}{Durham, NC}{Professor of }{\vspace{3pt} }}
+
+% \vspace{6pt}
+
+% \item{\cventry{Feb.2019-Jul.2019}{For Professor %\href{https://sites.duke.edu/rachelkranton/}{Rachel E. Kranton}{Modeling, Visualization and Simulation}{Durham, NC}{}{\vspace{3pt} Proofread and summarized theoretical models in drafts, finishing further proofs and programming the simulation to illustrate how income distribution and altruism alter entrepreneurs' behaviors of providing favor under a network context. Visualizing networks using Python and R.}}
+
+% \item{\cventry{May.2019--Present}{For Robert A. Bandeen Professor \href{https://www.fuqua.duke.edu/faculty/leslie-marx}{Leslie M. Marx}}{Modeling and Solving}{Durham, NC}{}{\vspace{3pt} Extended the calibration of parameters to procurement with buyer power. Solved the system of equations analytically, and numerically with Matlab. Tried heuristic search to solve the system of equations when they can not be numerically calculated}}
+ 
+% \vspace{6pt}
+% 
+% \item{\cventry{Feb.2017--Oct.2018}{For mentor}{Literature Survey}{Wuhan, China}{}{\vspace{3pt}Revised Professor Huhui’s paper, Natural Resource Dependency and Economic Growth in Resource-abundant Regions: Evidence from China, which included compiling literature review, verifying significance.}}
+
+\end{itemize}
+
+\section{TA Experience}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{\cventry{Aug.2020--Dec.2020}{For Professor Ron Parr}{Artificial Intelligence}{Durham, NC}{Duke University}{\vspace{3pt} Designing homework and exams, office hours, answering piazza, grading homework and exams.}}
+
+\vspace{6pt}
+
+\item{\cventry{Jan.2020--May.2020}{For Professor Vincent Conitzer}{Computational Microeconomics}{Durham, NC}{Duke University}{\vspace{3pt} Teaching recitations, holding office hours, answering piazza, setuping Sakai and Gradescope, grading homework.}}
+
+\vspace{6pt}
+
+\item{\cventry{Aug.2019--Dec.2019}{For Professor Cynthia Rudin}{Machine Learning}{Durham, NC}{Duke University}{\vspace{3pt} Designing kaggle competition, grading kaggle and most assignments, webmaster, printing both exams, holding office hours, answering piazza, proctoring, and assembling final grades.}}
+
+% \vspace{6pt}
+% 
+% \item{\cventry{Feb.2018--Jun.2018}{For Professor Aiyong Zhu}{Data Analysis Methods and Practice}{Wuhan, China}{University of Mannheim}{\vspace{3pt} Answered questions with respect to data analysis in R, and set up an OwnCloud server to collect assignments.}}
+ 
+\end{itemize}
+
+%\section{Technical Skills}
+%
+%\vspace{6pt}
+%
+%\begin{itemize}
+%
+%\item \textbf{Programming Languages:} Python, C\texttt{++}, Unix Shell, \LaTeX, R, Matlab, Java, Stata.\\ Also basic ability with: GNU MathProg, MySQL, Lingo.
+%
+%\vspace{6pt}
+%
+%\item \textbf{Miscellaneous Skills:} \href{https://www.gem5.org/}{Gem5}, Web Scraping, System Administration, Data Manipulation.
+%
+%\end{itemize}
+
+\section{Interests and extra-curricular activity}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item{Game Theory, Social Choice, Causal Inference, Fair Division, and Mechanism Design.}
+% \item{Algorithms, Artificial Intelligence and Distributed System.}
+% \item{GNU/Linux, Free and Open Source Software Projects, Internet Privacy and Cybersecurity.}
+% \item{Breaking my laptop, desktop and servers when hacking them, and then fix them.}
+\item{Russian Political Jokes, Programmer Memes, Video Games, Board Games.}
+\item{Dinning, Dancing, Festival Celebration, Movies, Live Music.}
+\item{History, Linguistics, Sociology.}
+\item{Badminton, Archery.}
+
+% \vspace{6pt}
+% 
+% \item{I am a member of a number of university societies. I was also the vice president and co-founder of the flash mob society. My roles in this included recruiting members, in which during "fresher's fair" we enlisted over 200 new members. This was regarded as very successful, considering other societies averaged around 50. I also appeared in an interview on the university television station, set up a society bank account, and helped organise the events. One of these events was featured in the local newspaper.}
+% 
+% \vspace{6pt}
+% 
+% \item{I am also an avid hiker, having completed the national 3 peaks challenge last summer. Other interest include guitar, which I am self-taught, and home brewing.}
+% 
+\end{itemize}
+% 
+% \section{References}
+% 
+% \vspace{6pt}
+%  
+% \begin{itemize}
+% 
+% \item{Up to 4 references available on request}
+% 
+% \end{itemize}
+
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
