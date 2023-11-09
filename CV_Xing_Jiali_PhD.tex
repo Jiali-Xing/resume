@@ -6,7 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[12pt,a4paper,sans,colorlinks]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % modern themes
 \moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -58,12 +58,15 @@
 %            content
 %----------------------------------------------------------------------------------
 
-\AfterPreamble{\hypersetup{
-  colorlinks,
-  linkcolor=blue,
-  anchorcolor=blue,
-  citecolor=blue
-}}
+
+%\AfterPreamble{
+%	\hypersetup{
+%		colorlinks = true,
+%		linkcolor = green,      % Change 'green' to 'customgreen' if you have defined a custom color
+%		urlcolor = green,       % Change 'green' to 'customgreen' if you have defined a custom color
+%		citecolor = green       % Change 'green' to 'customgreen' if you have defined a custom color
+%	}
+%}
 
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
@@ -85,7 +88,7 @@
 	
 	\item{\cventry{Jan.2021--Present}{%\href{https://econ.duke.edu/masters-programs/degree-programs/msec}{
 				Ph.D. Computer and Information Science}
-			{University of Pennsylvania}{Philadelphia}{\textit{GPA: 3.81/4 }}{Coursework: Beginning Taiwaness, Theory of Computation}}  % arguments 3 to 6 can be left empty	
+			{University of Pennsylvania}{Philadelphia}{\textit{GPA: 3.81/4 }}{Coursework: Computer Organization and Design, Theory of Computation}}  % arguments 3 to 6 can be left empty	
 	
 %	\item{\cventry{Sept.2020--Jan.2021}{%\href{https://econ.duke.edu/masters-programs/degree-programs/msec}{
 %				Ph.D. Computer Science}
@@ -96,7 +99,7 @@
 M.S. Economics \& Computation}
 {Duke University}{Durham}{\textit{GPA: 3.96/4}}{Coursework: Computational Economics, Design and Analysis Algorithms, Artificial Intelligence, Ph.D. Econometrics I, II, Machine Learning, Econometrics of Market Design, Distributed System}}  % arguments 3 to 6 can be left empty
 	
-	\item{\cventry{Sept.2014--May\,2018}{Bachelor of Economics}{Wuhan University}{Wuhan}{\textit{GPA: 3.89/4}}{Coursework: Calculus, Real Analysis, Linear Algebra, Ordinary Differential Equation, Dynamic Optimization, Probability Theory and Statistics, Stochastic Processes, Time Series, and Mathematical Modeling}}
+	\item{\cventry{Sept.2014--May\,2018}{Bachelor of Economics}{Wuhan University}{Wuhan}{\textit{GPA: 3.89/4}}{Coursework: Calculus, Real Analysis, Linear Algebra, Ordinary Differential Equation, Dynamic Optimization, Probability Theory \& Statistics, Stochastic Processes, Time Series, Mathematical Modeling}}
 
 \end{itemize}
 
@@ -147,16 +150,41 @@ M.S. Economics \& Computation}
 %
 %\vspace{6pt}
 
-\item{\cventry{\href{https://conferences.sigcomm.org/hotnets/2021/accepted.html}{HotNets21}}{Joint with Henri Maxime Demoulin, Konstantinos Kallas, and Benjamin C. Lee}{Charon: A Framework for Microservice Overload Control}{}{}{\vspace{3pt} Modern cloud applications are increasingly large and complex, designing an efficient overload control scheme that scales well is tedious. We argue that part of the challenge is a lack of first principles mechanisms one can use to design scalable and verifiable policies. We present Charon, a market-based scheme for large scale cloud applications. Charon relies on tokens to negotiate the acquisition of compute resources. Charon decouple the mechanisms used to generate and value tokens, and introduces a novel price propagation technique that scales well to large scale cloud applications. We study how one can build, using Charon's primitives, a concrete overload control policy and its performance compared to a policy built without Charon.}}
-
+\item{\cventry{}{May 2022 - Present}{Carbon Responder: Coordinating Demand Response for the Datacenter Fleet}{}{}{With Bilge Acun,
+		Aditya Sundarrajan,
+		David Brooks,
+		Manoj Chakkaravarthy, Nikky Avila,
+		Carole-Jean Wu, and
+		Benjamin C. Lee.
+		 \\    Collaborated on designing the Carbon Responder to mitigate carbon emissions in datacenters by modulating computational loads based on the marginal carbon intensity of the power supply. Targeted both online and batch processing workloads and developed fair strategies for distributing demand response curtailments across different workloads. Highlighted the realistic trade-offs between carbon footprint reduction and performance, reset expectations and offered more grounded assessments of demand response potential in modern, hyperscale datacenters.
+%		Designed Carbon Responder to reduce datacenter carbon emission. It modulates heterogeneous datacenter computation in response to the marginal carbon intensity of the energy supply. Carbon Responder targets both online and batch workloads for demand response and develops strategies for apportioning curtailments across heterogeneous workloads fairly. First demonstrated the realisitc tradeoffs between carbon reduction and performance penalty, resetting the expectations.
+	}}
 \vspace{6pt}
-%\clearpage
 
-\item{\cventry{Ongoing}{Joint with Benjamin C. Lee}{Fair Allocation for Complementary and Substitutable System Resources}{}{}{\vspace{3pt} We present a framework to model and allocate a mix of complementary and substitutable resources. The framework operationalizes the nested constant elasticity of substitution utility function and develops an allocation procedure that guarantees sharing incentives and Pareto efficiency. We draw parameters from gem5 experiments and then compare our algorithm against DRF.}}
+\item{\cventry{}{Mar. 2021 - Present}{Charon: A Framework for Microservice Overload Control}{}{}{
+		With Akis Giannoukos, Henri Maxime Demoulin, Konstantinos Kallas, and Benjamin C. Lee.
+		\\
+	    Co-developed Charon, a novel distributed framework for microservice overload control that improves performance and scalability. Utilized a token-based market system for resource allocation and innovative price propagation techniques. Demonstrated the benefits against traditional overload control policies. The workshop version %detailing Charon's architecture and benefits 
+	    available at
+		%Developed Charon to enhance microservice application performance and scalability. Charon is a distributed overload control mechanism. It employs a token-based market system for resource acquisition and a novel price propagation technique, outperforming traditional overload control policies.  The workshop version is available at 
+		\href{https://dl.acm.org/doi/10.1145/3484266.3487378}{HotNets21}.
+}}
+\vspace{6pt}
+\clearpage
+%\item{\cventry{\href{https://conferences.sigcomm.org/hotnets/2021/accepted.html}{HotNets21}}{Joint with Henri Maxime Demoulin, Konstantinos Kallas, and Benjamin C. Lee}{Charon: A Framework for Microservice Overload Control}{}{}{\vspace{3pt} Modern cloud applications are increasingly large and complex, designing an efficient overload control scheme that scales well is tedious. We argue that part of the challenge is a lack of first principles mechanisms one can use to design scalable and verifiable policies. We present Charon, a market-based scheme for large scale cloud applications. Charon relies on tokens to negotiate the acquisition of compute resources. Charon decouple the mechanisms used to generate and value tokens, and introduces a novel price propagation technique that scales well to large scale cloud applications. We study how one can build, using Charon's primitives, a concrete overload control policy and its performance compared to a policy built without Charon.}}
 
+\item{\cventry{}{May 2019 - Nov. 2021}{Fair Allocation for Complementary and Substitutable System Resources}{}{}{With Benjamin C. Lee.
+		\\
+	    Proposed and detailed a framework for the allocation of complementary and substitutable microarchitectural resources such as cores, memory bandwidth, and L2 cache sizes. Utilized the nested constant elasticity of substitution utility function to ensure sharing incentives and Pareto efficiency. Benchmarked our approach against conventional baselines using parameters profiled from gem5 experiments.
+		%Presented a framework to model and allocate a mix of complementary and substitutable microachtechtural resources (cores, memory bandwidth, and l2cache size). Operationalized the nested constant elasticity of substitution utility function and developed an allocation procedure that guarantees sharing incentives and Pareto efficiency. Profiled the parameters from gem5 experiments and then compare the allocation results against baselines.
+	}}
 \vspace{6pt}
 
-\item{\cventry{\href{https://users.cs.duke.edu/~jx76/blog/wp-content/uploads/2019/10/Xing-Jiali_Econ_690_Term_paper_revised.pdf}{Term Paper}}{Sole Author}{Does Centralized Corruption Reduce Bribes?}{}{}{\vspace{3pt} After considering heteroskedasticity, spatial autocorrelation, and robustness, we find that centralized bureaucracy does not lower corruption by reducing minimum bribes, i.e., the bribe frontier, but does lower the bribes by reducing the bribe inefficiency. It means that once the entrepreneurs pay bribes efficiently, a more centralized bureaucratic structure will not help reduce their bribes anymore.}}
+\item{\cventry{}{Aug. 2018 - Jan. 2019}{Does Centralized Corruption Reduce Bribes?}{}{}{\vspace{3pt}
+	Employed Stochastic Frontier Analysis to evaluate the impact of centralized bureaucracy on corruption levels. Controlled for heteroskedasticity, spatial autocorrelation, and robustness. Concluded that while centralized governance does not reduce the base level of bribery (the bribe frontier), it does significantly lower overall bribe amounts by decreasing inefficiencies in bribe transactions.
+		 %Accounted for heteroskedasticity, spatial autocorrelation, and robustness to study the corruption of centralized bureaucracy with Stochastic Frontier Analysis. Found that centralized bureaucracy does not lower corruption by reducing minimum bribes, i.e., the bribe frontier, but does lower the bribes by reducing the bribe inefficiency. 
+%It means that once the entrepreneurs pay bribes efficiently, a more centralized bureaucratic structure will not help reduce their bribes anymore. 
+Full paper available \href{https://drive.google.com/file/d/1T4f4T2zn9_PrjdNB7JCt5EXsz4jEponx/view?usp=sharing}{here}.}}
 
 %\vspace{6pt}
 
@@ -184,16 +212,22 @@ M.S. Economics \& Computation}
 
 \begin{itemize}
 
-\item{\cventry{May.2022--Dec.2022}{Meta Inc.}{Summer Research Internship}{Meta, Menlo Park, CA}{}{\vspace{3pt} With Bilge Acun,
-		Aditya Sundarrajan,
-		David Brooks,
-		Manoj Chakkaravarthy,
-		Carole-Jean Wu,
-		Benjamin C. Lee, we propose Carbon Responder to reduce datacenter carbon emission. It modulates heterogeneous datacenter computation in response to the marginal carbon intensity of the energy supply. Carbon Responder targets both online and batch workloads for demand response and develops strategies for apportioning curtailments across heterogeneous workloads}}
-
+\item{\cventry{May.2022--Dec.2022}{Summer Research Internship}{SysML Group at FAIR, Meta Inc.}{Meta, Menlo Park, CA}{}{\vspace{3pt} Refined and expanded the analysis of the \href{https://dl.acm.org/doi/pdf/10.1145/3575693.3575754}{Carbon Explorer} project. Collaborated with various teams to assess datacenter power demand elasticity and delay tolerance in real-world scenarios. Enhanced the project by developing a multi-workload, carbon-aware demand response mechanism, integrating diverse data and computational workloads.
+		% With Bilge Acun,
+%		Aditya Sundarrajan,
+%		David Brooks,
+%		Manoj Chakkaravarthy,
+%		Carole-Jean Wu,
+%		Benjamin C. Lee, 
+		%Fixed and deepened the analysis of previous work \href{https://dl.acm.org/doi/pdf/10.1145/3575693.3575754}{Carbon Explorer}. Connected with different teams to study the real-world datacenter power demand elasiticity and delay tolerance. Based on the observation, extended the work to a multi-workload carbon-aware demand response mechanism.
+	}}
 \vspace{6pt}
 
-\item{\cventry{Jun.2020--Mar.2021}{Raytheon Technologies and William \& Mary}{Research Collaboration}{Durham, NC}{}{\vspace{3pt} With David Fischer, Nitya Labh, Ryan Piersma, Benjamin C. Lee, Yu Amy Xia, Tuhin		Sahai, and Vahid Tarokh, we implemented a framework for simulation of permissioned blockchains for logistics and beyond.}}
+\item{\cventry{Jun.2020--Mar.2021}{Research Collaboration}{Raytheon Technologies and William \& Mary}{Durham, NC}{}{\vspace{3pt} 
+		In collaboration with David Fischer, Nitya Labh, Ryan Piersma, Benjamin C. Lee, Yu Amy Xia, Tuhin Sahai, and Vahid Tarokh, contributed to the development of a simulation framework for permissioned blockchains, with applications in logistics and other domains.
+		%With David Fischer, Nitya Labh, Ryan Piersma, Benjamin C. Lee, Yu Amy Xia, Tuhin		Sahai, and Vahid Tarokh, we implemented a framework for simulation of permissioned blockchains for logistics and beyond. 
+		Full paper available \href{https://arxiv.org/pdf/2103.02260.pdf}{here}.
+	}}
 
 
 % \item{\cventry{Jun.2019--Jan.2020}{With Professor Cynthia Rudin and Professor Yaron Shaposhnik}{Triplets Embedding for Visualization}{Durham, NC}{}{\vspace{3pt} In order to visualize high dimensional data, we tried to achieve the dimension reduction in an interpretable way by perserving the rank of edges in selected triplets of data points.}}
@@ -214,41 +248,65 @@ M.S. Economics \& Computation}
 
 \end{itemize}
 
-\section{TA Experience}
-
-\vspace{6pt}
+\section{Teaching Assistant Experience}
 
 \begin{itemize}
-
-\item{\cventry{Aug.2020--Dec.2020}{For Professor Ron Parr}{Artificial Intelligence}{Durham, NC}{Duke University}{\vspace{3pt} Designing homework and exams, office hours, answering piazza, grading homework and exams.}}
-
-\vspace{6pt}
-
-\item{\cventry{Jan.2020--May.2020}{For Professor Vincent Conitzer}{Computational Microeconomics}{Durham, NC}{Duke University}{\vspace{3pt} Teaching recitations, holding office hours, answering piazza, setuping Sakai and Gradescope, grading homework.}}
-
-\vspace{6pt}
-
-\item{\cventry{Aug.2019--Dec.2019}{For Professor Cynthia Rudin}{Machine Learning}{Durham, NC}{Duke University}{\vspace{3pt} Designing kaggle competition, grading kaggle and most assignments, webmaster, printing both exams, holding office hours, answering piazza, proctoring, and assembling final grades.}}
-
-% \vspace{6pt}
-% 
-% \item{\cventry{Feb.2018--Jun.2018}{For Professor Aiyong Zhu}{Data Analysis Methods and Practice}{Wuhan, China}{University of Mannheim}{\vspace{3pt} Answered questions with respect to data analysis in R, and set up an OwnCloud server to collect assignments.}}
- 
+	
+	\item{\cventry{Spring 2022}{Teaching Assistant for Dr. Aaron Roth}{Algorithmic Game Theory}{Philadelphia, PA}{University of Pennsylvania}{
+			Graded coursework and examinations, and held weekly office hours.
+	}}
+	
+	\item{\cventry{Fall 2020}{Teaching Assistant for Dr. Ron Parr}{Artificial Intelligence}{Durham, NC}{Duke University}{
+			Designed assessments, led office hours, managed Piazza discussions, and graded assignments.
+	}}
+	
+	\item{\cventry{Spring 2020}{Teaching Assistant for Dr. Vincent Conitzer}{Computational Microeconomics}{Durham, NC}{Duke University}{
+			Taught recitations, oversaw course tools (forums, Gradescope), and provided grading support.
+	}}
+	
+	\item{\cventry{Fall 2019}{Teaching Assistant for Dr. Cynthia Rudin}{Machine Learning}{Durham, NC}{Duke University}{
+			Coordinated a Kaggle competition, acted as course webmaster, and assisted in grading and exams.
+	}}
+	
 \end{itemize}
 
-%\section{Technical Skills}
+
+%
+%\section{TA Experience}
 %
 %\vspace{6pt}
 %
 %\begin{itemize}
 %
-%\item \textbf{Programming Languages:} Python, C\texttt{++}, Unix Shell, \LaTeX, R, Matlab, Java, Stata.\\ Also basic ability with: GNU MathProg, MySQL, Lingo.
+%\item{\cventry{Aug.2020--Dec.2020}{For Professor Ron Parr}{Artificial Intelligence}{Durham, NC}{Duke University}{\vspace{3pt} Designing homework and exams, office hours, answering piazza, grading homework and exams.}}
 %
 %\vspace{6pt}
 %
-%\item \textbf{Miscellaneous Skills:} \href{https://www.gem5.org/}{Gem5}, Web Scraping, System Administration, Data Manipulation.
+%\item{\cventry{Jan.2020--May.2020}{For Professor Vincent Conitzer}{Computational Microeconomics}{Durham, NC}{Duke University}{\vspace{3pt} Teaching recitations, holding office hours, answering piazza, setuping Sakai and Gradescope, grading homework.}}
 %
+%\vspace{6pt}
+%
+%\item{\cventry{Aug.2019--Dec.2019}{For Professor Cynthia Rudin}{Machine Learning}{Durham, NC}{Duke University}{\vspace{3pt} Designing kaggle competition, grading kaggle and most assignments, webmaster, printing both exams, holding office hours, answering piazza, proctoring, and assembling final grades.}}
+
+% \vspace{6pt}
+% 
+% \item{\cventry{Feb.2018--Jun.2018}{For Professor Aiyong Zhu}{Data Analysis Methods and Practice}{Wuhan, China}{University of Mannheim}{\vspace{3pt} Answered questions with respect to data analysis in R, and set up an OwnCloud server to collect assignments.}}
+ 
 %\end{itemize}
+
+\section{Technical Skills}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} Golang, Python, Unix Shell, C\texttt{++}, \LaTeX, R, Matlab, Java.\\ Also basic ability with: GNU MathProg, MySQL, Lingo, Stata.
+
+\vspace{6pt}
+
+\item \textbf{Miscellaneous Skills:} \href{https://www.gem5.org/}{gem5}, Web Scraping, System Administration, Network Security.
+
+\end{itemize}
 
 \section{Interests and extra-curricular activity}
 
@@ -258,10 +316,10 @@ M.S. Economics \& Computation}
 
 \item{Game Theory, Social Choice, Causal Inference, Fair Division, and Mechanism Design.}
 % \item{Algorithms, Artificial Intelligence and Distributed System.}
-% \item{GNU/Linux, Free and Open Source Software Projects, Internet Privacy and Cybersecurity.}
+\item{Political Economics, Internet Privacy and Cybersecurity.}
 % \item{Breaking my laptop, desktop and servers when hacking them, and then fix them.}
-\item{Russian Political Jokes, Programmer Memes, Video Games, Board Games.}
-\item{Dinning, Dancing, Festival Celebration, Movies, Live Music.}
+%\item{Russian Political Jokes, Programmer Memes, Video Games, Board Games.}
+%\item{Dinning, Dancing, Festival Celebration, Movies, Live Music.}
 \item{History, Linguistics, Sociology.}
 \item{Badminton, Archery.}
 
@@ -287,7 +345,8 @@ M.S. Economics \& Computation}
 
 
 %-----       letter       ---------------------------------------------------------
-
+%\definecolor{links}{HTML}{2A1B81}
+%\hypersetup{urlcolor=green}
 \end{document}
 
 
